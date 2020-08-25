@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		58F93376A0317BE0701D7FD8 /* Pods_KSDanmuViewDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EEDE829E911BEB506929A8A /* Pods_KSDanmuViewDemo.framework */; };
+		681D26B524F363D100B37505 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 681D26B424F363D100B37505 /* AppDelegate.m */; };
+		681D26B824F363D100B37505 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 681D26B724F363D100B37505 /* SceneDelegate.m */; };
+		681D26BB24F363D100B37505 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 681D26BA24F363D100B37505 /* ViewController.m */; };
+		681D26BE24F363D100B37505 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 681D26BC24F363D100B37505 /* Main.storyboard */; };
+		681D26C024F363D300B37505 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 681D26BF24F363D300B37505 /* Assets.xcassets */; };
+		681D26C324F363D300B37505 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 681D26C124F363D300B37505 /* LaunchScreen.storyboard */; };
+		681D26C624F363D300B37505 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 681D26C524F363D300B37505 /* main.m */; };
+		681D26CF24F3648400B37505 /* KSPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 681D26CE24F3648400B37505 /* KSPlayerViewController.m */; };
+		681D26D224F368EF00B37505 /* UIColor+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 681D26D124F368EF00B37505 /* UIColor+Utils.m */; };
+		681D26D524F369E000B37505 /* KSPortraitDanmuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 681D26D424F369E000B37505 /* KSPortraitDanmuView.m */; };
+		681D26D824F36AE900B37505 /* KSDanMuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 681D26D724F36AE900B37505 /* KSDanMuModel.m */; };
+		681D26DC24F3706600B37505 /* HWWeakTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 681D26DA24F3706600B37505 /* HWWeakTimer.m */; };
+		681D26E324F375C200B37505 /* KSDanmuViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 681D26E224F375C200B37505 /* KSDanmuViewCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2EEDE829E911BEB506929A8A /* Pods_KSDanmuViewDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KSDanmuViewDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		681D26B024F363D100B37505 /* KSDanmuViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KSDanmuViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		681D26B324F363D100B37505 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		681D26B424F363D100B37505 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		681D26B624F363D100B37505 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		681D26B724F363D100B37505 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		681D26B924F363D100B37505 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		681D26BA24F363D100B37505 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		681D26BD24F363D100B37505 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		681D26BF24F363D300B37505 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		681D26C224F363D300B37505 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		681D26C424F363D300B37505 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		681D26C524F363D300B37505 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		681D26CD24F3648400B37505 /* KSPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSPlayerViewController.h; sourceTree = "<group>"; };
+		681D26CE24F3648400B37505 /* KSPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSPlayerViewController.m; sourceTree = "<group>"; };
+		681D26D024F368EF00B37505 /* UIColor+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Utils.h"; sourceTree = "<group>"; };
+		681D26D124F368EF00B37505 /* UIColor+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Utils.m"; sourceTree = "<group>"; };
+		681D26D324F369E000B37505 /* KSPortraitDanmuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSPortraitDanmuView.h; sourceTree = "<group>"; };
+		681D26D424F369E000B37505 /* KSPortraitDanmuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSPortraitDanmuView.m; sourceTree = "<group>"; };
+		681D26D624F36AE900B37505 /* KSDanMuModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSDanMuModel.h; sourceTree = "<group>"; };
+		681D26D724F36AE900B37505 /* KSDanMuModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSDanMuModel.m; sourceTree = "<group>"; };
+		681D26D924F36B8A00B37505 /* KSDanmuMessageType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSDanmuMessageType.h; sourceTree = "<group>"; };
+		681D26DA24F3706600B37505 /* HWWeakTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWWeakTimer.m; sourceTree = "<group>"; };
+		681D26DB24F3706600B37505 /* HWWeakTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWWeakTimer.h; sourceTree = "<group>"; };
+		681D26E124F375C200B37505 /* KSDanmuViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSDanmuViewCell.h; sourceTree = "<group>"; };
+		681D26E224F375C200B37505 /* KSDanmuViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSDanmuViewCell.m; sourceTree = "<group>"; };
+		E0C65302244AA470CB5CD7E9 /* Pods-KSDanmuViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSDanmuViewDemo.debug.xcconfig"; path = "Target Support Files/Pods-KSDanmuViewDemo/Pods-KSDanmuViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		FA5CEB28AFF0D0B0B19F5F02 /* Pods-KSDanmuViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSDanmuViewDemo.release.xcconfig"; path = "Target Support Files/Pods-KSDanmuViewDemo/Pods-KSDanmuViewDemo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		681D26AD24F363D100B37505 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58F93376A0317BE0701D7FD8 /* Pods_KSDanmuViewDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		63F999D60E67E86C92F65726 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2EEDE829E911BEB506929A8A /* Pods_KSDanmuViewDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		681D26A724F363D100B37505 = {
+			isa = PBXGroup;
+			children = (
+				681D26B224F363D100B37505 /* KSDanmuViewDemo */,
+				681D26B124F363D100B37505 /* Products */,
+				8E9B19F9C8A3CD3FF2E079D4 /* Pods */,
+				63F999D60E67E86C92F65726 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		681D26B124F363D100B37505 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				681D26B024F363D100B37505 /* KSDanmuViewDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		681D26B224F363D100B37505 /* KSDanmuViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				681D26CC24F3646300B37505 /* Danmu */,
+				681D26B324F363D100B37505 /* AppDelegate.h */,
+				681D26B424F363D100B37505 /* AppDelegate.m */,
+				681D26B624F363D100B37505 /* SceneDelegate.h */,
+				681D26B724F363D100B37505 /* SceneDelegate.m */,
+				681D26B924F363D100B37505 /* ViewController.h */,
+				681D26BA24F363D100B37505 /* ViewController.m */,
+				681D26BC24F363D100B37505 /* Main.storyboard */,
+				681D26BF24F363D300B37505 /* Assets.xcassets */,
+				681D26C124F363D300B37505 /* LaunchScreen.storyboard */,
+				681D26C424F363D300B37505 /* Info.plist */,
+				681D26C524F363D300B37505 /* main.m */,
+			);
+			path = KSDanmuViewDemo;
+			sourceTree = "<group>";
+		};
+		681D26CC24F3646300B37505 /* Danmu */ = {
+			isa = PBXGroup;
+			children = (
+				681D26DD24F3740200B37505 /* Common */,
+				681D26D924F36B8A00B37505 /* KSDanmuMessageType.h */,
+				681D26CD24F3648400B37505 /* KSPlayerViewController.h */,
+				681D26CE24F3648400B37505 /* KSPlayerViewController.m */,
+				681D26D324F369E000B37505 /* KSPortraitDanmuView.h */,
+				681D26D424F369E000B37505 /* KSPortraitDanmuView.m */,
+				681D26D624F36AE900B37505 /* KSDanMuModel.h */,
+				681D26D724F36AE900B37505 /* KSDanMuModel.m */,
+			);
+			path = Danmu;
+			sourceTree = "<group>";
+		};
+		681D26DD24F3740200B37505 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				681D26DB24F3706600B37505 /* HWWeakTimer.h */,
+				681D26DA24F3706600B37505 /* HWWeakTimer.m */,
+				681D26D024F368EF00B37505 /* UIColor+Utils.h */,
+				681D26D124F368EF00B37505 /* UIColor+Utils.m */,
+				681D26E124F375C200B37505 /* KSDanmuViewCell.h */,
+				681D26E224F375C200B37505 /* KSDanmuViewCell.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		8E9B19F9C8A3CD3FF2E079D4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E0C65302244AA470CB5CD7E9 /* Pods-KSDanmuViewDemo.debug.xcconfig */,
+				FA5CEB28AFF0D0B0B19F5F02 /* Pods-KSDanmuViewDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		681D26AF24F363D100B37505 /* KSDanmuViewDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 681D26C924F363D300B37505 /* Build configuration list for PBXNativeTarget "KSDanmuViewDemo" */;
+			buildPhases = (
+				8E25C4C12A5225461ACED03D /* [CP] Check Pods Manifest.lock */,
+				681D26AC24F363D100B37505 /* Sources */,
+				681D26AD24F363D100B37505 /* Frameworks */,
+				681D26AE24F363D100B37505 /* Resources */,
+				7F55F7EE8BA4955316EBE946 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KSDanmuViewDemo;
+			productName = KSDanmuViewDemo;
+			productReference = 681D26B024F363D100B37505 /* KSDanmuViewDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		681D26A824F363D100B37505 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = sapphire;
+				TargetAttributes = {
+					681D26AF24F363D100B37505 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+				};
+			};
+			buildConfigurationList = 681D26AB24F363D100B37505 /* Build configuration list for PBXProject "KSDanmuViewDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 681D26A724F363D100B37505;
+			productRefGroup = 681D26B124F363D100B37505 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				681D26AF24F363D100B37505 /* KSDanmuViewDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		681D26AE24F363D100B37505 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				681D26C324F363D300B37505 /* LaunchScreen.storyboard in Resources */,
+				681D26C024F363D300B37505 /* Assets.xcassets in Resources */,
+				681D26BE24F363D100B37505 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7F55F7EE8BA4955316EBE946 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KSDanmuViewDemo/Pods-KSDanmuViewDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KSDanmuViewDemo/Pods-KSDanmuViewDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KSDanmuViewDemo/Pods-KSDanmuViewDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E25C4C12A5225461ACED03D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KSDanmuViewDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		681D26AC24F363D100B37505 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				681D26BB24F363D100B37505 /* ViewController.m in Sources */,
+				681D26D224F368EF00B37505 /* UIColor+Utils.m in Sources */,
+				681D26D524F369E000B37505 /* KSPortraitDanmuView.m in Sources */,
+				681D26B524F363D100B37505 /* AppDelegate.m in Sources */,
+				681D26C624F363D300B37505 /* main.m in Sources */,
+				681D26D824F36AE900B37505 /* KSDanMuModel.m in Sources */,
+				681D26E324F375C200B37505 /* KSDanmuViewCell.m in Sources */,
+				681D26DC24F3706600B37505 /* HWWeakTimer.m in Sources */,
+				681D26B824F363D100B37505 /* SceneDelegate.m in Sources */,
+				681D26CF24F3648400B37505 /* KSPlayerViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		681D26BC24F363D100B37505 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				681D26BD24F363D100B37505 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		681D26C124F363D300B37505 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				681D26C224F363D300B37505 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		681D26C724F363D300B37505 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		681D26C824F363D300B37505 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		681D26CA24F363D300B37505 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0C65302244AA470CB5CD7E9 /* Pods-KSDanmuViewDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CEE8S45P4W;
+				INFOPLIST_FILE = KSDanmuViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sapphire.KSDanmuViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		681D26CB24F363D300B37505 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA5CEB28AFF0D0B0B19F5F02 /* Pods-KSDanmuViewDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CEE8S45P4W;
+				INFOPLIST_FILE = KSDanmuViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sapphire.KSDanmuViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		681D26AB24F363D100B37505 /* Build configuration list for PBXProject "KSDanmuViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				681D26C724F363D300B37505 /* Debug */,
+				681D26C824F363D300B37505 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		681D26C924F363D300B37505 /* Build configuration list for PBXNativeTarget "KSDanmuViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				681D26CA24F363D300B37505 /* Debug */,
+				681D26CB24F363D300B37505 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 681D26A824F363D100B37505 /* Project object */;
+}
