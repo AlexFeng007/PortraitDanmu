@@ -45,22 +45,22 @@ static CGFloat const kDanmuViewCellHorizontalMargin = 6;
 
         //_reloadTimer = [HWWeakTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(reloadChatTable) userInfo:nil repeats:YES];
         
-        _reloadTimer = [HWWeakTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(addDanmuModel) userInfo:nil repeats:YES];
-        
         [self addSubview:self.danmuTable];
         self.danmuTable.backgroundColor = [UIColor clearColor];
         [self.danmuTable mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self);
         }];
         
-        //Test:load DataSource
+        
+        //TodoTest:load DataSource
         _arrayChat = [KSDanMuModel mj_objectArrayWithKeyValuesArray:self.danmuDateSource];
         _hasNewMessage = YES;
         _indexCount = 0;
+        
+        _reloadTimer = [HWWeakTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(addDanmuModel) userInfo:nil repeats:YES];
     }
     return self;
 }
-
 
 - (void)dealloc
 {
@@ -142,30 +142,32 @@ static CGFloat const kDanmuViewCellHorizontalMargin = 6;
 //测试增加Danmu刷新
 - (void)addDanmuModel
 {
-    if (self.indexCount < self.arrayChat.count) {
-        KSDanMuModel *model = [self.arrayChat objectAtIndex:self.indexCount];
-        self.indexCount++;
-        [self.arrayDanmuModels addObject:model];
-        [self.danmuTable reloadData];
-    }
+    // 模拟socket 收到弹幕推送消息
+    KSDanMuModel *model = [self.arrayChat objectAtIndex:self.indexCount];
+    self.indexCount++;
+    [self.arrayDanmuModels addObject:model];
+    [self refreshChatTable];
 }
 
 //更新弹幕列表数据
--(void)refreshChatTable:(KSDanMuModel *)model{
-    if (model) {
+-(void)refreshChatTable{
+    
+    if (_canAutoScroll) {
+        [_arrayCurrentDanmuModels removeAllObjects];
+        [_arrayCurrentDanmuModels addObjectsFromArray:_arrayDanmuModels];
         
-        [_arrayDanmuModels addObject:model];
+        [self.danmuTable reloadData];
         
-        if (_arrayDanmuModels.count>500) {   //保留最新的500条数据
-            [_arrayDanmuModels removeObjectAtIndex:0];
+        if (_arrayCurrentDanmuModels.count) {
+            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:_arrayCurrentDanmuModels.count - 1 inSection:0];
+            [self.danmuTable scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:NO];
         }
-        _hasNewMessage = YES;
     }
 }
 
 -(void)reloadChatTable{
     if (_hasNewMessage) {
-        //_hasNewMessage = NO;
+        _hasNewMessage = NO;
         
         if (_canAutoScroll) {
             [_arrayChat removeAllObjects];
@@ -196,7 +198,6 @@ static CGFloat const kDanmuViewCellHorizontalMargin = 6;
     }
 }
 
-
 //切换房间时清空上一个直播间的聊天记录
 -(void)cleanChats{
     [_arrayChat removeAllObjects];
@@ -212,13 +213,13 @@ static CGFloat const kDanmuViewCellHorizontalMargin = 6;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [_arrayDanmuModels count];
+    return [_arrayCurrentDanmuModels count];
     
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    KSDanMuModel *model = [_arrayDanmuModels objectAtIndex:indexPath.row];
-    return model.danmuRowHeight;
+    KSDanMuModel *model = [_arrayCurrentDanmuModels objectAtIndex:indexPath.row];
+    return model.danmuRowHeight + 5.f;
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -238,13 +239,17 @@ static CGFloat const kDanmuViewCellHorizontalMargin = 6;
     
     KSDanMuModel *model = [_arrayDanmuModels objectAtIndex:indexPath.row];
     [cell configWithModel:model];
+    
+    cell.backgroundColor = [UIColor redColor];
+    
     if (indexPath.row % 2 == 0) {
         cell.contentView.backgroundColor = [UIColor greenColor];
     }else{
         cell.contentView.backgroundColor = [UIColor brownColor];
     }
     
-    
+    //UIView *backGroundView = [[UIView alloc] init];
+
     return cell;
 }
 
@@ -260,78 +265,78 @@ static CGFloat const kDanmuViewCellHorizontalMargin = 6;
 }
 
 #pragma mark - UIScrollViewDelegate
--(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
-    if (scrollView == self.danmuTable) {
-        _canAutoScroll = NO;
-    }
-}
+//-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+//    if (scrollView == self.danmuTable) {
+//        _canAutoScroll = NO;
+//    }
+//}
+//
+//- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+//    if (scrollView == self.danmuTable) {
+//        CGPoint offset = scrollView.contentOffset;
+//        CGRect bounds = scrollView.bounds;
+//        CGSize size = scrollView.contentSize;
+//        UIEdgeInsets inset = scrollView.contentInset;
+//        float y = offset.y + bounds.size.height - inset.bottom;
+//        float h = size.height;
+//        // 手动滚到地步后打开自动滚动
+//        if(y >= h ) {
+//            if(!_canAutoScroll){
+//
+//                [_arrayChat removeAllObjects];
+//
+//                [_arrayCurrentDanmuModels removeAllObjects];
+//                [_arrayCurrentDanmuModels addObjectsFromArray:_arrayDanmuModels];
+//
+//                [self.danmuTable reloadData];
+//                if(_arrayChat.count){
+//                    [self.danmuTable scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:_arrayChat.count - 1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:NO];
+//
+//                }
+//                _canAutoScroll    = YES;
+//                self.btnHasNew.hidden = YES;
+//
+//            }
+//        }
+//
+//    }
+//
+//}
 
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-    if (scrollView == self.danmuTable) {
-        CGPoint offset = scrollView.contentOffset;
-        CGRect bounds = scrollView.bounds;
-        CGSize size = scrollView.contentSize;
-        UIEdgeInsets inset = scrollView.contentInset;
-        float y = offset.y + bounds.size.height - inset.bottom;
-        float h = size.height;
-        // 手动滚到地步后打开自动滚动
-        if(y >= h ) {
-            if(!_canAutoScroll){
-                
-                [_arrayChat removeAllObjects];
-                
-                [_arrayCurrentDanmuModels removeAllObjects];
-                [_arrayCurrentDanmuModels addObjectsFromArray:_arrayDanmuModels];
-                
-                [self.danmuTable reloadData];
-                if(_arrayChat.count){
-                    [self.danmuTable scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:_arrayChat.count - 1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:NO];
 
-                }
-                _canAutoScroll    = YES;
-                self.btnHasNew.hidden = YES;
-                
-            }
-        }
-        
-    }
-    
-}
-
-
--(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
-    if (scrollView == self.danmuTable) {
-        CGPoint offset = scrollView.contentOffset;
-        CGRect bounds = scrollView.bounds;
-        CGSize size = scrollView.contentSize;
-        UIEdgeInsets inset = scrollView.contentInset;
-        float y = offset.y + bounds.size.height - inset.bottom;
-        float h = size.height;
-        // 手动滚到地步后打开自动滚动
-        if(y >= h ) {
-            if(!_canAutoScroll){
-                
-                [_arrayChat removeAllObjects];
-                
-                [_arrayCurrentDanmuModels removeAllObjects];
-                [_arrayCurrentDanmuModels addObjectsFromArray:_arrayDanmuModels];
-                
-                
-                [self.danmuTable reloadData];
-                
-                if(_arrayChat.count){
-                     [self.danmuTable scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:_arrayChat.count - 1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:NO];
-                }
-               
-                _canAutoScroll    = YES;
-                self.btnHasNew.hidden = YES;
-                
-            }
-        }
-        
-    }
-    
-}
+//-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+//    if (scrollView == self.danmuTable) {
+//        CGPoint offset = scrollView.contentOffset;
+//        CGRect bounds = scrollView.bounds;
+//        CGSize size = scrollView.contentSize;
+//        UIEdgeInsets inset = scrollView.contentInset;
+//        float y = offset.y + bounds.size.height - inset.bottom;
+//        float h = size.height;
+//        // 手动滚到地步后打开自动滚动
+//        if(y >= h ) {
+//            if(!_canAutoScroll){
+//
+//                [_arrayChat removeAllObjects];
+//
+//                [_arrayCurrentDanmuModels removeAllObjects];
+//                [_arrayCurrentDanmuModels addObjectsFromArray:_arrayDanmuModels];
+//
+//
+//                [self.danmuTable reloadData];
+//
+//                if(_arrayChat.count){
+//                     [self.danmuTable scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:_arrayChat.count - 1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:NO];
+//                }
+//
+//                _canAutoScroll    = YES;
+//                self.btnHasNew.hidden = YES;
+//
+//            }
+//        }
+//
+//    }
+//
+//}
 
 //从本地删除违规弹幕
 - (void)deleteIllegalDanmu{
@@ -347,7 +352,7 @@ static CGFloat const kDanmuViewCellHorizontalMargin = 6;
         _danmuDateSource = @[
         @{
             @"nickname": @"fengbofeng",
-            @"content": @"主播能加你一个微信么？主播能加你一个微信么？主播能加你一个微信么？主播能加你一个微信么？主播能加你一个微信么",
+            @"content": @"主播能加你一个微信么？主播能加你一个微信么？主播能加你一个微信么？主播能加你一个微信么？主播能加你一个微信么?",
             },
         @{
             @"nickname": @"fengbofeng",

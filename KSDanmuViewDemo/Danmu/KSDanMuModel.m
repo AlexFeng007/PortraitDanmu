@@ -17,11 +17,10 @@
         @"content":@"content",
     };
 }
-
 - (CGFloat)danmuRowHeight
 {
     if (!_danmuRowHeight) {
-        CGSize labelSize = [self labelAutoCalculateRectWith:[NSString stringWithFormat:@"%@:%@",self.nickname,self.content] FontSize:13.f MaxSize:CGSizeMake(350, 180)];
+        CGSize labelSize = [self labelAutoCalculateRectWith:[NSString stringWithFormat:@"%@:%@",self.nickname,self.content] FontSize:13.f MaxSize:CGSizeMake(375, 180)];
         _danmuRowHeight = ceil(labelSize.height);
     }
     return _danmuRowHeight;
@@ -31,10 +30,10 @@
 - (CGSize)labelAutoCalculateRectWith:(NSString*)text FontSize:(CGFloat)fontSize MaxSize:(CGSize)maxSize
 {
    NSMutableParagraphStyle* paragraphStyle = [[NSMutableParagraphStyle alloc]init];
-   paragraphStyle.lineBreakMode=NSLineBreakByWordWrapping;
+   paragraphStyle.lineBreakMode=NSLineBreakByCharWrapping;
    NSDictionary* attributes =@{NSFontAttributeName:[UIFont systemFontOfSize:fontSize],NSParagraphStyleAttributeName:paragraphStyle.copy};
-    CGSize labelSize;
-    
+
+   CGSize labelSize;
     if ([text respondsToSelector:@selector(boundingRectWithSize:options:attributes:context:)])
     {
         labelSize = [text boundingRectWithSize: maxSize
@@ -46,5 +45,4 @@
     labelSize.width = ceil(labelSize.width);
     return labelSize;
 }
-
 @end

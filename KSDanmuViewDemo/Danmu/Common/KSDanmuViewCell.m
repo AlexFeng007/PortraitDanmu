@@ -38,19 +38,19 @@
 - (void)configWithModel:(KSDanMuModel *)model
 {
     NSString *danmuString = [NSString stringWithFormat:@"%@:%@",model.nickname,model.content];
-    CGSize danmuContentSize = [self labelAutoCalculateRectWith:danmuString FontSize:13.f MaxSize:CGSizeMake(375, 180)];
-    self.danmuContent.frame = CGRectMake(5, 5, danmuContentSize.width, danmuContentSize.height);
     [self.contentView addSubview:self.danmuContent];
-    [self.danmuContent sizeToFit];
     self.danmuContent.text = danmuString;
+    self.danmuContent.lineBreakMode = NSLineBreakByCharWrapping;
+    self.danmuContent.numberOfLines = 0;
+    [self.danmuContent sizeToFit];
     [self.danmuContent mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.mas_equalTo(self.contentView.mas_centerY);
         make.left.mas_equalTo(self.contentView.mas_left).offset(5.f);
-        make.height.mas_equalTo(danmuContentSize.height);
         make.right.mas_equalTo(self.contentView.mas_right).offset(-5.f);
+        make.top.mas_equalTo(self.contentView.mas_top);
+        make.bottom.mas_equalTo(self.contentView.mas_bottom);
+        make.centerY.mas_equalTo(self.contentView.mas_centerY);
     }];
 }
-
 - (void)setupUI
 {
     self.contentView.backgroundColor = [UIColor clearColor];
