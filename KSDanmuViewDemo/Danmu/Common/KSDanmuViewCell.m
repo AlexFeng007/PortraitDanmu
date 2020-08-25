@@ -13,6 +13,7 @@
 
 @interface KSDanmuViewCell()
 @property (nonatomic, strong) UILabel *danmuContent;
+@property (nonatomic, strong) UIView *BgView;
 @end
 
 @implementation KSDanmuViewCell
@@ -37,9 +38,15 @@
 
 - (void)configWithModel:(KSDanMuModel *)model
 {
-    NSString *danmuString = [NSString stringWithFormat:@"%@:%@",model.nickname,model.content];
+    NSString *danmuString = [NSString stringWithFormat:@"%@: %@",model.nickname,model.content];
+    
+    NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc] initWithString:danmuString];
+    [attrStr addAttribute:NSForegroundColorAttributeName value:[UIColor colorFromHexRGB:@"3263FF"] range:NSMakeRange(0, model.nickname.length+1)];
+    [attrStr addAttribute:NSForegroundColorAttributeName value:[UIColor colorFromHexRGB:@"ffffff"] range:NSMakeRange(model.nickname.length+2, model.content.length)];
+    
+    
     [self.contentView addSubview:self.danmuContent];
-    self.danmuContent.text = danmuString;
+    self.danmuContent.attributedText = attrStr;
     self.danmuContent.lineBreakMode = NSLineBreakByCharWrapping;
     self.danmuContent.numberOfLines = 0;
     [self.danmuContent sizeToFit];
@@ -50,10 +57,15 @@
         make.bottom.mas_equalTo(self.contentView.mas_bottom);
         make.centerY.mas_equalTo(self.contentView.mas_centerY);
     }];
+    
+//    self.contentView.backgroundColor = [UIColor colorFromHexRGB:@"000000"];
+//    self.contentView.alpha = 0.3;
+//    self.contentView.layer.cornerRadius = 3.f;
+//    self.contentView.clipsToBounds = YES;
 }
 - (void)setupUI
 {
-    self.contentView.backgroundColor = [UIColor clearColor];
+    //self.contentView.backgroundColor = [UIColor clearColor];
 }
 
 #pragma mark: lazy
@@ -67,6 +79,16 @@
         _danmuContent.numberOfLines = 0;
     }
     return _danmuContent;
+}
+
+- (UIView *)BgView
+{
+    if (!_BgView) {
+        _BgView = [[UIView alloc] initWithFrame:self.contentView.bounds];
+        _BgView.backgroundColor = [UIColor colorFromHexRGB:@"000000"];
+        _BgView.alpha = 0.3;
+    }
+    return _BgView;
 }
 
 #pragma mark: 状态管理

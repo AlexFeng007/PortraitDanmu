@@ -12,6 +12,7 @@
 #import "Masonry.h"
 
 @interface KSPlayerViewController ()
+@property (nonatomic, strong) UIImageView *bgView;
 @property (nonatomic, strong) KSPortraitDanmuView *danmuView;
 @end
 
@@ -21,6 +22,11 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorFromHexRGB:@"#040320"];;
     self.navigationController.navigationBarHidden = YES;
+    
+    [self.view addSubview:self.bgView];
+    [self.bgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(self.view);
+    }];
     
     [self.view addSubview:self.danmuView];
     self.danmuView.backgroundColor = [UIColor clearColor];
@@ -34,4 +40,14 @@
     return _danmuView;
 }
 
+- (UIImageView *)bgView
+{
+    if (!_bgView) {
+        _bgView = [[UIImageView alloc] initWithFrame:self.view.bounds];
+        _bgView.image = [UIImage imageNamed:@"playerViewBg"];
+        _bgView.contentMode = UIViewContentModeScaleAspectFit;
+    }
+    
+    return _bgView;
+}
 @end
