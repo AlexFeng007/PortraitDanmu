@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1885C88B24FDE442004098FF /* KSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885C88A24FDE442004098FF /* KSBaseViewController.m */; };
+		1885C89124FDE9A9004098FF /* AVPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885C88F24FDE9A9004098FF /* AVPlayerManager.m */; };
+		1885C89224FDE9A9004098FF /* AVPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885C89024FDE9A9004098FF /* AVPlayerView.m */; };
+		1885C89524FDEB0B004098FF /* KSShortVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885C89424FDEB0B004098FF /* KSShortVideoPlayerViewController.m */; };
+		1885C89924FDEE96004098FF /* KSShortVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885C89824FDEE96004098FF /* KSShortVideoCell.m */; };
+		1885C89D24FDF026004098FF /* KSVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885C89C24FDF026004098FF /* KSVideoModel.m */; };
+		1885C8A824FE3ACF004098FF /* WebCacheHelpler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885C8A724FE3ACF004098FF /* WebCacheHelpler.m */; };
+		1885C8BC24FE3D5A004098FF /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885C8AB24FE3D59004098FF /* NSDate+Extension.m */; };
+		1885C8BD24FE3D5A004098FF /* UIWindow+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885C8AC24FE3D59004098FF /* UIWindow+Extension.m */; };
+		1885C8BE24FE3D5A004098FF /* CADisplayLink+Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885C8AF24FE3D5A004098FF /* CADisplayLink+Tool.m */; };
+		1885C8BF24FE3D5A004098FF /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885C8B424FE3D5A004098FF /* UIImage+Extension.m */; };
+		1885C8C024FE3D5A004098FF /* NSAttributedString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885C8B524FE3D5A004098FF /* NSAttributedString+Extension.m */; };
+		1885C8C124FE3D5A004098FF /* NSNotification+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885C8B624FE3D5A004098FF /* NSNotification+Extension.m */; };
+		1885C8C224FE3D5A004098FF /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885C8B824FE3D5A004098FF /* NSString+Extension.m */; };
+		1885C8C324FE3D5A004098FF /* NSTextAttachment+Emotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885C8B924FE3D5A004098FF /* NSTextAttachment+Emotion.m */; };
+		1885C8C424FE3D5A004098FF /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885C8BA24FE3D5A004098FF /* UIImageView+WebCache.m */; };
 		58F93376A0317BE0701D7FD8 /* Pods_KSDanmuViewDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EEDE829E911BEB506929A8A /* Pods_KSDanmuViewDemo.framework */; };
 		681D26B524F363D100B37505 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 681D26B424F363D100B37505 /* AppDelegate.m */; };
 		681D26B824F363D100B37505 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 681D26B724F363D100B37505 /* SceneDelegate.m */; };
@@ -24,6 +40,39 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1885C88924FDE442004098FF /* KSBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSBaseViewController.h; sourceTree = "<group>"; };
+		1885C88A24FDE442004098FF /* KSBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSBaseViewController.m; sourceTree = "<group>"; };
+		1885C88D24FDE9A9004098FF /* AVPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVPlayerView.h; sourceTree = "<group>"; };
+		1885C88E24FDE9A9004098FF /* AVPlayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVPlayerManager.h; sourceTree = "<group>"; };
+		1885C88F24FDE9A9004098FF /* AVPlayerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVPlayerManager.m; sourceTree = "<group>"; };
+		1885C89024FDE9A9004098FF /* AVPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVPlayerView.m; sourceTree = "<group>"; };
+		1885C89324FDEB0B004098FF /* KSShortVideoPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSShortVideoPlayerViewController.h; sourceTree = "<group>"; };
+		1885C89424FDEB0B004098FF /* KSShortVideoPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSShortVideoPlayerViewController.m; sourceTree = "<group>"; };
+		1885C89724FDEE96004098FF /* KSShortVideoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSShortVideoCell.h; sourceTree = "<group>"; };
+		1885C89824FDEE96004098FF /* KSShortVideoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSShortVideoCell.m; sourceTree = "<group>"; };
+		1885C89B24FDF026004098FF /* KSVideoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSVideoModel.h; sourceTree = "<group>"; };
+		1885C89C24FDF026004098FF /* KSVideoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSVideoModel.m; sourceTree = "<group>"; };
+		1885C89E24FDF4CE004098FF /* KSPreferHead.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSPreferHead.h; sourceTree = "<group>"; };
+		1885C8A624FE3ACF004098FF /* WebCacheHelpler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebCacheHelpler.h; sourceTree = "<group>"; };
+		1885C8A724FE3ACF004098FF /* WebCacheHelpler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebCacheHelpler.m; sourceTree = "<group>"; };
+		1885C8AA24FE3D59004098FF /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		1885C8AB24FE3D59004098FF /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+		1885C8AC24FE3D59004098FF /* UIWindow+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Extension.m"; sourceTree = "<group>"; };
+		1885C8AD24FE3D59004098FF /* NSTextAttachment+Emotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTextAttachment+Emotion.h"; sourceTree = "<group>"; };
+		1885C8AE24FE3D5A004098FF /* NSAttributedString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Extension.h"; sourceTree = "<group>"; };
+		1885C8AF24FE3D5A004098FF /* CADisplayLink+Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CADisplayLink+Tool.m"; sourceTree = "<group>"; };
+		1885C8B024FE3D5A004098FF /* CADisplayLink+Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CADisplayLink+Tool.h"; sourceTree = "<group>"; };
+		1885C8B124FE3D5A004098FF /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
+		1885C8B224FE3D5A004098FF /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
+		1885C8B324FE3D5A004098FF /* NSNotification+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotification+Extension.h"; sourceTree = "<group>"; };
+		1885C8B424FE3D5A004098FF /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		1885C8B524FE3D5A004098FF /* NSAttributedString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Extension.m"; sourceTree = "<group>"; };
+		1885C8B624FE3D5A004098FF /* NSNotification+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNotification+Extension.m"; sourceTree = "<group>"; };
+		1885C8B724FE3D5A004098FF /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		1885C8B824FE3D5A004098FF /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		1885C8B924FE3D5A004098FF /* NSTextAttachment+Emotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTextAttachment+Emotion.m"; sourceTree = "<group>"; };
+		1885C8BA24FE3D5A004098FF /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
+		1885C8BB24FE3D5A004098FF /* UIWindow+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Extension.h"; sourceTree = "<group>"; };
 		2EEDE829E911BEB506929A8A /* Pods_KSDanmuViewDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KSDanmuViewDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		681D26B024F363D100B37505 /* KSDanmuViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KSDanmuViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		681D26B324F363D100B37505 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -66,6 +115,86 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1885C88724FDE2F9004098FF /* shortVideo */ = {
+			isa = PBXGroup;
+			children = (
+				1885C8A924FE3D46004098FF /* Category */,
+				1885C89A24FDEF08004098FF /* Model */,
+				1885C89624FDEE60004098FF /* View */,
+				1885C88C24FDE968004098FF /* Player */,
+				1885C88824FDE41E004098FF /* Base */,
+				1885C89324FDEB0B004098FF /* KSShortVideoPlayerViewController.h */,
+				1885C89424FDEB0B004098FF /* KSShortVideoPlayerViewController.m */,
+				1885C8A624FE3ACF004098FF /* WebCacheHelpler.h */,
+				1885C8A724FE3ACF004098FF /* WebCacheHelpler.m */,
+			);
+			path = shortVideo;
+			sourceTree = "<group>";
+		};
+		1885C88824FDE41E004098FF /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				1885C88924FDE442004098FF /* KSBaseViewController.h */,
+				1885C88A24FDE442004098FF /* KSBaseViewController.m */,
+				1885C89E24FDF4CE004098FF /* KSPreferHead.h */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		1885C88C24FDE968004098FF /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				1885C88E24FDE9A9004098FF /* AVPlayerManager.h */,
+				1885C88F24FDE9A9004098FF /* AVPlayerManager.m */,
+				1885C88D24FDE9A9004098FF /* AVPlayerView.h */,
+				1885C89024FDE9A9004098FF /* AVPlayerView.m */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		1885C89624FDEE60004098FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1885C89724FDEE96004098FF /* KSShortVideoCell.h */,
+				1885C89824FDEE96004098FF /* KSShortVideoCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1885C89A24FDEF08004098FF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1885C89B24FDF026004098FF /* KSVideoModel.h */,
+				1885C89C24FDF026004098FF /* KSVideoModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1885C8A924FE3D46004098FF /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				1885C8B024FE3D5A004098FF /* CADisplayLink+Tool.h */,
+				1885C8AF24FE3D5A004098FF /* CADisplayLink+Tool.m */,
+				1885C8AE24FE3D5A004098FF /* NSAttributedString+Extension.h */,
+				1885C8B524FE3D5A004098FF /* NSAttributedString+Extension.m */,
+				1885C8B124FE3D5A004098FF /* NSDate+Extension.h */,
+				1885C8AB24FE3D59004098FF /* NSDate+Extension.m */,
+				1885C8B324FE3D5A004098FF /* NSNotification+Extension.h */,
+				1885C8B624FE3D5A004098FF /* NSNotification+Extension.m */,
+				1885C8B724FE3D5A004098FF /* NSString+Extension.h */,
+				1885C8B824FE3D5A004098FF /* NSString+Extension.m */,
+				1885C8AD24FE3D59004098FF /* NSTextAttachment+Emotion.h */,
+				1885C8B924FE3D5A004098FF /* NSTextAttachment+Emotion.m */,
+				1885C8AA24FE3D59004098FF /* UIImage+Extension.h */,
+				1885C8B424FE3D5A004098FF /* UIImage+Extension.m */,
+				1885C8B224FE3D5A004098FF /* UIImageView+WebCache.h */,
+				1885C8BA24FE3D5A004098FF /* UIImageView+WebCache.m */,
+				1885C8BB24FE3D5A004098FF /* UIWindow+Extension.h */,
+				1885C8AC24FE3D59004098FF /* UIWindow+Extension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		63F999D60E67E86C92F65726 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +243,7 @@
 		681D26CC24F3646300B37505 /* Danmu */ = {
 			isa = PBXGroup;
 			children = (
+				1885C88724FDE2F9004098FF /* shortVideo */,
 				681D26DD24F3740200B37505 /* Common */,
 				681D26D924F36B8A00B37505 /* KSDanmuMessageType.h */,
 				681D26CD24F3648400B37505 /* KSPlayerViewController.h */,
@@ -264,14 +394,30 @@
 			files = (
 				681D26BB24F363D100B37505 /* ViewController.m in Sources */,
 				681D26D224F368EF00B37505 /* UIColor+Utils.m in Sources */,
+				1885C89224FDE9A9004098FF /* AVPlayerView.m in Sources */,
 				681D26D524F369E000B37505 /* KSPortraitDanmuView.m in Sources */,
+				1885C89124FDE9A9004098FF /* AVPlayerManager.m in Sources */,
+				1885C8C124FE3D5A004098FF /* NSNotification+Extension.m in Sources */,
+				1885C8C324FE3D5A004098FF /* NSTextAttachment+Emotion.m in Sources */,
 				681D26B524F363D100B37505 /* AppDelegate.m in Sources */,
+				1885C8C224FE3D5A004098FF /* NSString+Extension.m in Sources */,
 				681D26C624F363D300B37505 /* main.m in Sources */,
+				1885C8C024FE3D5A004098FF /* NSAttributedString+Extension.m in Sources */,
 				681D26D824F36AE900B37505 /* KSDanMuModel.m in Sources */,
+				1885C8BC24FE3D5A004098FF /* NSDate+Extension.m in Sources */,
 				681D26E324F375C200B37505 /* KSDanmuViewCell.m in Sources */,
+				1885C8C424FE3D5A004098FF /* UIImageView+WebCache.m in Sources */,
 				681D26DC24F3706600B37505 /* HWWeakTimer.m in Sources */,
+				1885C8BD24FE3D5A004098FF /* UIWindow+Extension.m in Sources */,
+				1885C8BE24FE3D5A004098FF /* CADisplayLink+Tool.m in Sources */,
+				1885C8A824FE3ACF004098FF /* WebCacheHelpler.m in Sources */,
+				1885C89524FDEB0B004098FF /* KSShortVideoPlayerViewController.m in Sources */,
+				1885C8BF24FE3D5A004098FF /* UIImage+Extension.m in Sources */,
 				681D26B824F363D100B37505 /* SceneDelegate.m in Sources */,
 				681D26CF24F3648400B37505 /* KSPlayerViewController.m in Sources */,
+				1885C89924FDEE96004098FF /* KSShortVideoCell.m in Sources */,
+				1885C88B24FDE442004098FF /* KSBaseViewController.m in Sources */,
+				1885C89D24FDF026004098FF /* KSVideoModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

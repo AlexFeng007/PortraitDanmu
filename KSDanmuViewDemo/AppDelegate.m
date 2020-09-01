@@ -21,7 +21,6 @@
     if (@available(iOS 13.0, *)) {
     
       } else {
-        
          self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
          KSPlayerViewController *playerVC = [[KSPlayerViewController alloc]init];
          self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:playerVC];

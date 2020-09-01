@@ -8,5 +8,6 @@ target 'KSDanmuViewDemo' do
   # Pods for KSDanmuViewDemo
   pod 'Masonry’
   pod 'MJExtension'
-  
+  pod 'AFNetworking'
+  pod 'SocketRocket'
 end

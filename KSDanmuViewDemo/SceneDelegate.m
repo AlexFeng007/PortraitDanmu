@@ -8,6 +8,7 @@
 
 #import "SceneDelegate.h"
 #import "KSPlayerViewController.h"
+#import "KSShortVideoPlayerViewController.h"
 
 
 @interface SceneDelegate ()
@@ -23,7 +24,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window = [[UIWindow alloc] initWithWindowScene:windowScene];
     
-    UINavigationController *rootViewController = [[UINavigationController alloc] initWithRootViewController:[KSPlayerViewController new]];
+    //UINavigationController *rootViewController = [[UINavigationController alloc] initWithRootViewController:[KSPlayerViewController new]];
+    UINavigationController *rootViewController = [[UINavigationController alloc] initWithRootViewController:[KSShortVideoPlayerViewController new]];
     self.window.rootViewController = rootViewController;
     [self.window setWindowScene:windowScene];
 }
